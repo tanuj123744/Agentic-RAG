@@ -1,0 +1,7 @@
+Retrieval Augmented Generation, or RAG, combines information retrieval with a language model.
+
+A RAG system first retrieves relevant information from an external knowledge source.
+
+The retrieved information is then provided to the language model as context.
+
+This allows the model to generate an answer using information that may not have been present in its original training data.

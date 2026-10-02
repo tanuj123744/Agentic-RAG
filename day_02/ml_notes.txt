@@ -1,0 +1,3 @@
+Machine learning is branch of computer science which deals with the study of algorithms where system learns some patterns from given data then 
+predict the output on unseen data. 
+There are mainly two types of learning : 1. Supervised Learning   2. Unsupervised learning
