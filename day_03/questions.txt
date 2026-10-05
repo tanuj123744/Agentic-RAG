@@ -1,11 +1,53 @@
 Q1. What is chunk ?
-Answer : Breaking of large text into smaller parts so that it can be more relevant, each such part is known as a chunk.
+Answer : Breaking of large text into smaller parts so that it can store only relevant and meaningful information together, each 
+         such part is known as a chunk.
 
 Q2.Why can't we simply embed the entire document ?
 Answer : Embedding entire document has many problems : (1) large computational cost  (2) storing noise (3) dilution of meaning of data
+         (4) retrieval precision decreases etc. 
 
 Q3. What is chunk size ? 
 Answer : It the amount of characters in each chunk.
 
 Q4. What is chunk overlap ?
-Answer : 
+Answer : It is amount of data that each new chunks takes from it's previous chunk so that it can maintain context.
+
+Q5. Why do we use overlap ?
+Answer : We use overlap so that we don't loose context of the informtion. 
+
+Q6. What happens if chunks are too small ?
+Answer : They loose context as now information is divided into several chunks and this leads to more computation.
+
+Q7. What happens if chunks are too large ?
+Answer : If chunks are too large then they may contain irrelevant information/noise which we don't need, so retrieval precision decreases.
+
+Q8. Why is excessive overlap is undesirable ?
+Answer : Excessive overlap will lead to a lot of duplicate data which will require more storage and wil be computationally expensive.
+
+Q9. Why should chunks have metadata ?
+Answer : Chunks should have metadata so that they can have refrence also with the information like from where this infomation came etc.
+
+Q10. What is the difference between fixed-size and semantic/sentence-based chunking ?
+Answer : In fixed size chunking we split the text/data at exact number of characters which can lead to context loss, while in sentence based 
+         chunking we chunks data based on complete sentences which helps to retain atleast sentences which carry useful meaning. 
+
+Q11. Why is recursive chunking useful ?
+Answer : It is useful beacuse splits based on seprators which try to maintain largest unit possible together below the chunk-size so that 
+         the meaning of the text is preserved.
+
+Q12. Given:
+
+chunk_size = 500
+chunk_overlap = 100
+
+what is the starting position of:
+
+Chunk 1
+Chunk 2
+Chunk 3
+Chunk 4
+Answer : Starting point of chunk 1 will be 0
+         Starting point of chunk 2 will be 500-100 = 400
+         Starting point of chunk 3 will be 900-100 = 800
+         Starting point of chunk 4 will be 1300-100 = 1200
+         
