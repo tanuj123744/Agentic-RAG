@@ -1,0 +1,11 @@
+Q1. What is chunk ?
+Answer : Breaking of large text into smaller parts so that it can be more relevant, each such part is known as a chunk.
+
+Q2.Why can't we simply embed the entire document ?
+Answer : Embedding entire document has many problems : (1) large computational cost  (2) storing noise (3) dilution of meaning of data
+
+Q3. What is chunk size ? 
+Answer : It the amount of characters in each chunk.
+
+Q4. What is chunk overlap ?
+Answer : 
