@@ -11,25 +11,24 @@ Deep learning is a subset of machine learning based on artificial
 neural networks. Neural networks can contain many layers and are
 particularly useful for processing complex data such as images,
 audio, and natural language.
-
-Natural language processing allows computers to process and
-understand human language. Modern NLP systems use machine learning
-and deep learning techniques to perform tasks such as classification,
-translation, summarization, and question answering.
 """
 
 
 chunks = chunk_text(
     text,
     chunk_size=300,
-    chunk_overlap=50
+    chunk_overlap=50,
+    source="ml_notes.txt"
 )
 
 
 print(f"Total chunks: {len(chunks)}")
 
-for i, chunk in enumerate(chunks, start=1):
-    print(f"\n{'=' * 60}")
-    print(f"CHUNK {i}")
-    print(f"{'=' * 60}")
-    print(chunk)
+for chunk in chunks:
+    print("\n" + "=" * 60)
+
+    print("Chunk ID:", chunk["metadata"]["chunk_id"])
+    print("Source:", chunk["metadata"]["source"])
+
+    print("\nText:")
+    print(chunk["text"])
