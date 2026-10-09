@@ -5,17 +5,18 @@ c = np.array([2,1])
 d = np.array([-1,-2])
 
 
-norm_a=np.linalg.norm(a)
-norm_b=np.linalg.norm(b)
-norm_c=np.linalg.norm(c)
-norm_d=np.linalg.norm(d)
+def cosine_similarity(a, b):
+    dot_product = np.dot(a, b)
 
-dot_a_b = np.dot(a,b)
-dot_b_c = np.dot(b,c)
-dot_c_d = np.dot(c,d)
-dot_d_a = np.dot(d,a)
+    norm_a = np.linalg.norm(a)
+    norm_b = np.linalg.norm(b)
 
-print(f"similarity between a and b is : {dot_a_b/(norm_a*norm_b)}")
-print(f"similarity between b and c is : {dot_b_c/(norm_b*norm_c)}")
-print(f"similarity between c and d is : {dot_c_d/(norm_c*norm_d)}")
-print(f"similarity between d and a is : {dot_d_a/(norm_d*norm_a)}")
+    if norm_a == 0 or norm_b == 0:
+        raise ValueError("Cosine similarity is undefined for zero vectors.")
+
+    return dot_product / (norm_a * norm_b)
+
+print("Similarity between A and B:", cosine_similarity(a, b))
+print("Similarity between B and C:", cosine_similarity(b, c))
+print("Similarity between C and D:", cosine_similarity(c, d))
+print("Similarity between D and A:", cosine_similarity(d, a))
