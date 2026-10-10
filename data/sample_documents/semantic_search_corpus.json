@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "text": "Overfitting occurs when a machine learning model learns the training data too closely and performs poorly on unseen data.",
+        "source": "ml_notes.txt"
+    },
+    {
+        "id": 2,
+        "text": "Regularization reduces overfitting by penalizing overly complex models during training.",
+        "source": "ml_notes.txt"
+    },
+    {
+        "id": 3,
+        "text": "Cross-validation estimates how well a machine learning model generalizes to unseen data.",
+        "source": "ml_notes.txt"
+    },
+    {
+        "id": 4,
+        "text": "Underfitting occurs when a model is too simple to capture important patterns in the training data.",
+        "source": "ml_notes.txt"
+    },
+    {
+        "id": 5,
+        "text": "Decision trees make predictions by recursively splitting data according to feature values.",
+        "source": "ml_notes.txt"
+    },
+    {
+        "id": 6,
+        "text": "Neural networks consist of interconnected artificial neurons organized into layers.",
+        "source": "dl_notes.txt"
+    },
+    {
+        "id": 7,
+        "text": "Gradient descent updates model parameters to reduce a loss function during training.",
+        "source": "dl_notes.txt"
+    },
+    {
+        "id": 8,
+        "text": "Convolutional neural networks are widely used for image recognition and computer vision.",
+        "source": "dl_notes.txt"
+    },
+    {
+        "id": 9,
+        "text": "Python supports object-oriented programming through classes, objects, inheritance, and polymorphism.",
+        "source": "python_notes.txt"
+    },
+    {
+        "id": 10,
+        "text": "A stack follows the last-in, first-out principle and supports push and pop operations.",
+        "source": "dsa_notes.txt"
+    },
+    {
+        "id": 11,
+        "text": "The gravitational force between two masses depends on their masses and the distance between them.",
+        "source": "physics_notes.txt"
+    },
+    {
+        "id": 12,
+        "text": "The Fourier transform represents a signal in terms of its frequency components.",
+        "source": "physics_notes.txt"
+    }
+]
