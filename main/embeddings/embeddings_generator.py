@@ -1,28 +1,13 @@
 from sentence_transformers import SentenceTransformer
-import numpy as np
 
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+class EmbeddingGenerator:
 
+    def __init__(self, model_name="sentence-transformers/all-MiniLM-L6-v2"):
+        self.model = SentenceTransformer(model_name)
 
-sentences = [
-    "The student is studying ML.",
-    "The student is learning artificial intelligence.",
-    "The cat is sleeping on the sofa."
-]
+    def embed(self, text):
+        return self.model.encode(text)
 
-
-embeddings = model.encode(sentences)
-
-
-def cosine_similarity(a, b):
-    return np.dot(a, b) / (
-        np.linalg.norm(a) * np.linalg.norm(b)
-    )
-
-
-print("Sentence 1 vs Sentence 2:",
-      cosine_similarity(embeddings[0], embeddings[1]))
-
-print("Sentence 1 vs Sentence 3:",
-      cosine_similarity(embeddings[0], embeddings[2]))
+    def embed_many(self, texts):
+        return self.model.encode(texts)
