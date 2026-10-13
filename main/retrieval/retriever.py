@@ -9,7 +9,7 @@ class Retriever:
 
     def __init__(
         self,
-        embed_query: Callable[[str], list[float]],
+        embed_query: Callable,
         vector_store: Any,
     ):
         self.embed_query = embed_query
@@ -22,15 +22,9 @@ class Retriever:
     ) -> list[dict]:
         """
         Retrieve the top-k documents relevant to a query.
-
-        Expected vector-store interface:
-            vector_store.search(query_embedding, top_k=top_k)
-
-        Expected result format:
-            A list of dictionaries containing document information
-            and similarity scores.
         """
 
+        # 1. Validate the query.
         if not isinstance(query, str):
             raise TypeError("Query must be a string.")
 
@@ -39,20 +33,21 @@ class Retriever:
         if not query:
             raise ValueError("Query cannot be empty.")
 
+        # 2. Validate top_k.
         if not isinstance(top_k, int) or isinstance(top_k, bool):
             raise TypeError("top_k must be an integer.")
 
         if top_k < 1:
             raise ValueError("top_k must be at least 1.")
 
-        # Step 1: Convert the query into an embedding.
+        # 3. Generate the query embedding.
         query_embedding = self.embed_query(query)
 
-        # Step 2: Search the vector store.
+        # 4. Search the vector store.
         results = self.vector_store.search(
             query_embedding,
-            top_k=top_k,
+            k=top_k,
         )
 
-        # Step 3: Return the retrieved documents.
+        # 5. Return the ranked results.
         return results
