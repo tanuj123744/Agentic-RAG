@@ -1,0 +1,38 @@
+[
+    {
+        "query": "What is overfitting in machine learning?",
+        "relevant_ids": [1]
+    },
+    {
+        "query": "How does regularization help machine learning models?",
+        "relevant_ids": [2]
+    },
+    {
+        "query": "How can we estimate how well a model generalizes to unseen data?",
+        "relevant_ids": [3]
+    },
+    {
+        "query": "What happens when a model is too simple to learn important patterns?",
+        "relevant_ids": [4]
+    },
+    {
+        "query": "How do decision trees make predictions?",
+        "relevant_ids": [5]
+    },
+    {
+        "query": "What are artificial neural networks made of?",
+        "relevant_ids": [6]
+    },
+    {
+        "query": "How does gradient descent update model parameters?",
+        "relevant_ids": [7]
+    },
+    {
+        "query": "What are convolutional neural networks used for?",
+        "relevant_ids": [8]
+    },
+    {
+        "query": "How does Python support object-oriented programming?",
+        "relevant_ids": [9]
+    }
+]
