@@ -52,10 +52,3 @@ def load_document(file_path):
 
     else:
         raise ValueError(f"Unsupported file type: {path.suffix}")
-
-
-documents = load_document("sample.txt")
-
-
-for document in documents:
-    print(document)
